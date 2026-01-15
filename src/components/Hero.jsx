@@ -21,6 +21,25 @@ const Hero = () => {
     return () => typed.destroy();
   }, []);
 
+  const socialLinks = [
+    {
+      icon: "fa-brands fa-instagram",
+      link: "https://www.instagram.com/",
+    },
+    {
+      icon: "fa-brands fa-linkedin-in",
+      link: "https://www.linkedin.com/",
+    },
+    {
+      icon: "fa-brands fa-github",
+      link: "https://github.com/",
+    },
+    {
+      icon: "fa-solid fa-laptop-code", // ✅ LeetCode FIX
+      link: "https://leetcode.com/",
+    },
+  ];
+
   return (
     <section
       id="home"
@@ -28,7 +47,7 @@ const Hero = () => {
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-        {/* IMAGE (MOBILE FIRST) */}
+        {/* IMAGE */}
         <motion.div
           animate={{ y: [0, -12, 0] }}
           transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
@@ -50,20 +69,17 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="text-center lg:text-left order-2"
         >
-          <h3 className="text-xl font-medium mb-2">
-            Hi, Myself
-          </h3>
+          <h3 className="text-xl font-medium mb-2">Hi, Myself</h3>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold">
             Nikhil <span className="text-red-500">Ranjan</span>
           </h1>
 
           <h2 className="mt-3 text-2xl md:text-3xl font-semibold">
-            And I'm a{" "}
-            <span className="multiple-text text-red-500"></span>
+            And I'm a <span className="multiple-text text-red-500"></span>
           </h2>
 
-          <p className="mt-6 text-gray-600 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+          <p className="mt-6 text-gray-600 max-w-xl mx-auto lg:mx-0">
             Welcome to my portfolio! Here you’ll find projects showcasing my
             skills in modern web development, clean UI design, and efficient
             problem-solving.
@@ -71,19 +87,21 @@ const Hero = () => {
 
           {/* SOCIAL ICONS */}
           <div className="mt-6 flex justify-center lg:justify-start gap-4">
-            {[
-              { icon: "fa-instagram", link: "https://www.instagram.com/" },
-              { icon: "fa-linkedin-in", link: "https://www.linkedin.com/" },
-              { icon: "fa-github", link: "https://github.com/" },
-              { icon: "fa-code", link: "https://leetcode.com/" },
-            ].map((item, i) => (
+            {socialLinks.map((item, i) => (
               <a
                 key={i}
                 href={item.link}
                 target="_blank"
-                className="w-10 h-10 flex items-center justify-center border-2 border-red-400 text-red-500 rounded-full hover:bg-red-500 hover:text-white transition"
+                rel="noreferrer"
+                className="
+                  w-11 h-11 flex items-center justify-center
+                  border-2 border-red-500 text-red-500
+                  rounded-full
+                  hover:bg-red-500 hover:text-white
+                  transition duration-300
+                "
               >
-                <i className={`fa-brands ${item.icon}`}></i>
+                <i className={item.icon}></i>
               </a>
             ))}
           </div>
@@ -108,7 +126,6 @@ const Hero = () => {
             </a>
           </div>
         </motion.div>
-
       </div>
     </section>
   );
