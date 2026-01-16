@@ -23,7 +23,7 @@ const Header = () => {
           />
 
           <span className="text-xl font-bold text-black">
-            My<span className="text-red-500">Portfolio</span>
+            My<span className="text-red-500"> Portfolio</span>
           </span>
         </motion.a>
 
@@ -56,6 +56,7 @@ const Header = () => {
           <ul className="flex flex-col items-center gap-6 py-6 font-medium text-gray-700">
             <li><a onClick={() => setMenuOpen(false)} href="#home">Home</a></li>
             <li><a onClick={() => setMenuOpen(false)} href="#about">About</a></li>
+            <li><a onClick={() => setMenuOpen(false)} href="#about">Skills</a></li>
             <li><a onClick={() => setMenuOpen(false)} href="#Portfolio">Projects</a></li>
             <li><a onClick={() => setMenuOpen(false)} href="#contact">Contact</a></li>
           </ul>

@@ -3,10 +3,7 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <section
-      id="contact"
-      className="py-24 bg-white px-6 md:px-16"
-    >
+    <section id="contact" className="py-24 bg-white px-6 md:px-16">
       <div className="max-w-5xl mx-auto">
 
         {/* Heading */}
@@ -34,7 +31,14 @@ const Contact = () => {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="bg-white rounded-2xl shadow-xl p-8 md:p-12 border border-gray-100"
+          className="
+            bg-white rounded-2xl
+            shadow-xl
+            p-8 md:p-12
+            border border-gray-100
+            hover:shadow-[0_0_30px_rgba(239,68,68,0.25)]
+            transition
+          "
         >
           <form
             action="https://formspree.io/f/meoepjze"
@@ -51,7 +55,13 @@ const Contact = () => {
                 name="name"
                 required
                 placeholder="Your Name"
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-400"
+                className="
+                  w-full px-4 py-3
+                  rounded-lg
+                  border border-gray-300
+                  focus:outline-none
+                  focus:ring-2 focus:ring-red-400
+                "
               />
             </div>
 
@@ -65,7 +75,13 @@ const Contact = () => {
                 name="email"
                 required
                 placeholder="you@example.com"
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-400"
+                className="
+                  w-full px-4 py-3
+                  rounded-lg
+                  border border-gray-300
+                  focus:outline-none
+                  focus:ring-2 focus:ring-red-400
+                "
               />
             </div>
 
@@ -79,25 +95,36 @@ const Contact = () => {
                 rows="5"
                 required
                 placeholder="Write your message here..."
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 resize-none focus:outline-none focus:ring-2 focus:ring-red-400"
+                className="
+                  w-full px-4 py-3
+                  rounded-lg
+                  border border-gray-300
+                  resize-none
+                  focus:outline-none
+                  focus:ring-2 focus:ring-red-400
+                "
               ></textarea>
             </div>
 
-            {/* Button */}
-            <div className="md:col-span-2 text-center">
-              <motion.button
-                whileHover={{
-                  scale: 1.05,
-                  backgroundColor: "#ef4444",
-                  boxShadow: "0px 10px 30px rgba(239,68,68,0.5)",
-                }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ duration: 0.3 }}
+            {/* BUTTON (SOCIAL STYLE) */}
+            <div className="md:col-span-2 flex justify-center">
+              <button
                 type="submit"
-                className="inline-flex items-center justify-center px-10 py-3 bg-black text-white rounded-full font-medium shadow-lg"
+                className="
+                  inline-flex items-center gap-2
+                  px-8 py-3
+                  border-2 border-red-500
+                  text-red-500
+                  rounded-full
+                  font-medium
+                  transition-all duration-300
+                  hover:bg-red-500 hover:text-white
+                  hover:-translate-y-1
+                "
               >
+                <i className="fa-solid fa-paper-plane"></i>
                 Send Message
-              </motion.button>
+              </button>
             </div>
           </form>
         </motion.div>

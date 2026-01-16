@@ -3,49 +3,62 @@ import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-gray-200 py-12">
+    <footer className="bg-black text-gray-300 py-14">
       <div className="max-w-7xl mx-auto px-6 text-center">
 
         {/* SOCIAL ICONS */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="flex justify-center gap-6 mb-6"
+          transition={{ duration: 0.6 }}
+          className="flex justify-center gap-6 mb-8"
         >
-          <a
-            href="https://github.com/"
-            target="_blank"
-            className="w-11 h-11 flex items-center justify-center border border-red-500 text-red-500 rounded-full hover:bg-red-500 hover:text-white transition"
-          >
-            <i className="fa-brands fa-github"></i>
-          </a>
-
-          <a
-            href="https://www.linkedin.com/"
-            target="_blank"
-            className="w-11 h-11 flex items-center justify-center border border-red-500 text-red-500 rounded-full hover:bg-red-500 hover:text-white transition"
-          >
-            <i className="fa-brands fa-linkedin-in"></i>
-          </a>
-
-          <a
-            href="https://leetcode.com/"
-            target="_blank"
-            className="w-11 h-11 flex items-center justify-center border border-red-500 text-red-500 rounded-full hover:bg-red-500 hover:text-white transition"
-          >
-            <i className="fa-solid fa-code"></i>
-          </a>
+          {[
+            {
+              icon: "fa-brands fa-github",
+              link: "https://github.com/nikhilranjan01",
+            },
+            {
+              icon: "fa-brands fa-linkedin-in",
+              link: "https://www.linkedin.com/in/nikhilranjan01",
+            },
+            {
+              icon: "fa-solid fa-laptop-code",
+              link: "https://leetcode.com/nikhilranjan01",
+            },
+          ].map((item, i) => (
+            <a
+              key={i}
+              href={item.link}
+              target="_blank"
+              rel="noreferrer"
+              className="
+                w-11 h-11
+                flex items-center justify-center
+                border-2 border-red-500
+                text-red-500
+                rounded-full
+                transition-all duration-300
+                hover:bg-red-500 hover:text-white
+                hover:-translate-y-1
+                hover:shadow-[0_0_15px_rgba(239,68,68,0.6)]
+              "
+            >
+              <i className={item.icon}></i>
+            </a>
+          ))}
         </motion.div>
 
-        {/* RED LINE */}
-        <div className="w-20 h-[2px] bg-red-500 mx-auto mb-4"></div>
+        {/* DIVIDER */}
+        <div className="w-24 h-[2px] bg-red-500 mx-auto mb-6"></div>
 
-        {/* COPYRIGHT TEXT */}
+        {/* COPYRIGHT */}
         <p className="text-sm md:text-base">
-          © 2026{" "}
-          <span className="text-white font-semibold">Nikhil Ranjan</span>.  
-          All Rights Reserved.
+          © {new Date().getFullYear()}{" "}
+          <span className="text-white font-semibold">
+            Nikhil Ranjan
+          </span>{" "}
+          • All Rights Reserved
         </p>
       </div>
     </footer>

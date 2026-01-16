@@ -12,37 +12,37 @@ const projects = [
   {
     title: "Student Voting System",
     image: project1,
-    desc: "Role-based voting system with authentication, secure voting, and real-time results using React, Node.js, Express, and MongoDB.",
-    link: "https://github.com/nikhilranjan01",
+    desc: "Role-based voting system with authentication, secure voting, and real-time results using MERN stack.",
+    link: "https://github.com/nikhilranjan01/election.git",
   },
   {
     title: "Game Library",
     image: project2,
-    desc: "Game exploration platform built with React, Redux, RAWG API, and Clerk authentication for secure state management.",
-    link: "https://github.com/nikhilranjan01",
+    desc: "Game exploration platform using React, Redux, RAWG API, and Clerk authentication.",
+    link: "https://gamelibrary01.vercel.app/",
   },
   {
     title: "MultiMart E-Commerce",
     image: project3,
-    desc: "Responsive e-commerce website with product listing and cart system built using React and Bootstrap.",
-    link: "https://github.com/nikhilranjan01",
+    desc: "Responsive e-commerce website with product listing and cart system built in React.",
+    link: "https://multimart01.vercel.app/",
   },
   {
     title: "Notes App",
     image: project4,
-    desc: "Full-stack notes app supporting CRUD operations with timestamp-based persistence using MERN stack.",
-    link: "https://github.com/nikhilranjan01",
+    desc: "Full-stack notes app supporting CRUD operations with MERN stack.",
+    link: "https://nikhilnotes.vercel.app/",
   },
   {
     title: "Coffee Creation Website",
     image: project5,
-    desc: "Interactive and responsive coffee brand website developed using HTML, CSS, and JavaScript.",
-    link: "https://nikhilranjan01.github.io/Coffeecreation/",
+    desc: "Interactive coffee brand website built with HTML, CSS, and JavaScript.",
+    link: "https://coffeecreation.vercel.app/",
   },
   {
     title: "Python Snake Game",
     image: project6,
-    desc: "Classic Snake game developed in Python using Tkinter with score tracking and collision handling.",
+    desc: "Classic Snake game developed in Python using Tkinter.",
     link: "https://github.com/nikhilranjan01/PYTHON/blob/main/SnakeGameProject2.py",
   },
 ];
@@ -62,7 +62,7 @@ const Projects = () => {
           Latest <span className="text-red-500">Projects</span>
         </motion.h2>
 
-        {/* Project Grid */}
+        {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {projects.map((project, index) => (
             <motion.div
@@ -71,37 +71,53 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -10 }}
-              className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-red-300/40 transition"
+              className="
+                group bg-white rounded-2xl overflow-hidden
+                border border-transparent
+                shadow-md
+                transition-all duration-300
+                hover:bg-red-50
+                hover:border-red-300
+                hover:shadow-[0_0_25px_rgba(239,68,68,0.35)]
+              "
             >
-              {/* IMAGE */}
-              <div className="relative overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-56 object-cover group-hover:scale-110 transition duration-500"
-                />
+              {/* Image */}
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-56 object-cover"
+              />
 
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-red-500/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-6 py-2 bg-white text-red-500 font-semibold rounded-full shadow-lg hover:scale-105 transition"
-                  >
-                    View Project
-                  </a>
-                </div>
-              </div>
-
-              {/* CONTENT */}
+              {/* Content */}
               <div className="p-6 text-center">
-                <h3 className="text-xl font-semibold mb-3">
+                <h3 className="text-xl font-semibold mb-3 group-hover:text-red-600 transition">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+
+                <p className="text-gray-600 text-sm leading-relaxed mb-6">
                   {project.desc}
                 </p>
+
+                {/* SOCIAL-STYLE BUTTON */}
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="
+                    inline-flex items-center gap-2
+                    px-6 py-2
+                    border-2 border-red-500
+                    text-red-500
+                    rounded-full
+                    font-medium
+                    transition-all duration-300
+                    hover:bg-red-500 hover:text-white
+                    hover:-translate-y-1
+                  "
+                >
+                  <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                  View Project
+                </a>
               </div>
             </motion.div>
           ))}

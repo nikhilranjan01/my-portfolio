@@ -23,22 +23,38 @@ const Hero = () => {
 
   const socialLinks = [
     {
-      icon: "fa-brands fa-instagram",
-      link: "https://www.instagram.com/",
+      name: "Facebook",
+      icon: "fa-brands fa-facebook-f",
+      link: "https://www.facebook.com/", 
     },
     {
+      name: "LinkedIn",
       icon: "fa-brands fa-linkedin-in",
-      link: "https://www.linkedin.com/",
+      link: "https://www.linkedin.com/in/nikhilranjan01",
     },
     {
+      name: "GitHub",
       icon: "fa-brands fa-github",
-      link: "https://github.com/",
+      link: "https://github.com/nikhilranjan01",
     },
     {
-      icon: "fa-solid fa-laptop-code", // ✅ LeetCode FIX
-      link: "https://leetcode.com/",
+      name: "LeetCode",
+      icon: "fa-solid fa-laptop-code",
+      link: "https://leetcode.com/nikhilranjan01",
+    },
+    {
+      name: "Instagram",
+      icon: "fa-brands fa-instagram",
+      link: "https://www.instagram.com/nikhil_ranjan_01/",
+    },
+
+    {
+      name: "Resume",
+      icon: "fa-solid fa-download",
+      link: "/resume.pdf",
     },
   ];
+
 
   return (
     <section
@@ -85,8 +101,8 @@ const Hero = () => {
             problem-solving.
           </p>
 
-          {/* SOCIAL ICONS */}
-          <div className="mt-6 flex justify-center lg:justify-start gap-4">
+          {/* SOCIAL LINKS WITH NAME */}
+          <div className="mt-8 flex flex-wrap justify-center lg:justify-start gap-4">
             {socialLinks.map((item, i) => (
               <a
                 key={i}
@@ -94,36 +110,21 @@ const Hero = () => {
                 target="_blank"
                 rel="noreferrer"
                 className="
-                  w-11 h-11 flex items-center justify-center
-                  border-2 border-red-500 text-red-500
+                  flex items-center gap-2
+                  px-4 py-2
+                  border-2 border-red-500
+                  text-red-500
                   rounded-full
+                  font-medium
+                  transition-all duration-300
                   hover:bg-red-500 hover:text-white
-                  transition duration-300
+                  hover:-translate-y-1
                 "
               >
                 <i className={item.icon}></i>
+                <span>{item.name}</span>
               </a>
             ))}
-          </div>
-
-          {/* RESUME BUTTON */}
-          <div className="mt-6 flex justify-center lg:justify-start">
-            <a
-              href="/resume.pdf"
-              className="
-                inline-flex items-center justify-center
-                px-8 py-3
-                bg-black text-white
-                rounded-full
-                shadow-lg
-                transition-all duration-300
-                hover:bg-red-500
-                hover:shadow-red-500/60
-                hover:-translate-y-1
-              "
-            >
-              Download Resume
-            </a>
           </div>
         </motion.div>
       </div>
