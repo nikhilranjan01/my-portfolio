@@ -57,7 +57,7 @@ const Header = () => {
             <li><a onClick={() => setMenuOpen(false)} href="#home">Home</a></li>
             <li><a onClick={() => setMenuOpen(false)} href="#about">About</a></li>
             <li><a onClick={() => setMenuOpen(false)} href="#about">Skills</a></li>
-            <li><a onClick={() => setMenuOpen(false)} href="#Portfolio">Projects</a></li>
+            <li><a onClick={() => setMenuOpen(false)} href="#projects">Projects</a></li>
             <li><a onClick={() => setMenuOpen(false)} href="#contact">Contact</a></li>
           </ul>
         </motion.div>
