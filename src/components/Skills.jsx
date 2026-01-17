@@ -42,7 +42,11 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-24 bg-white px-6 md:px-12">
+    <section
+      id="skills"
+      className="scroll-mt-20 py-20 bg-white px-6 md:px-12"
+    >
+
       <div className="max-w-7xl mx-auto">
 
         {/* Heading */}

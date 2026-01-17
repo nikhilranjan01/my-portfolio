@@ -49,7 +49,11 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-24 bg-white px-6 md:px-16">
+    <section
+      id="projects"
+      className="scroll-mt-20 py-24 bg-white px-6 md:px-16"
+    >
+
       <div className="max-w-7xl mx-auto">
 
         {/* Heading */}

@@ -5,8 +5,9 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="scroll-mt-16 py-24 bg-white px-6 md:px-16"
+      className="scroll-mt-20 py-24 bg-white px-6 md:px-16"
     >
+
 
       <div className="max-w-5xl mx-auto">
 

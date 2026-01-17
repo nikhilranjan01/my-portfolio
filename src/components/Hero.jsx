@@ -25,7 +25,7 @@ const Hero = () => {
     {
       name: "Facebook",
       icon: "fa-brands fa-facebook-f",
-      link: "https://www.facebook.com/", 
+      link: "https://www.facebook.com/",
     },
     {
       name: "LinkedIn",
@@ -59,8 +59,9 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center bg-white px-6 md:px-16 pt-24"
+      className="scroll-mt-20 min-h-screen flex items-center bg-white px-6 md:px-16 pt-24"
     >
+
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
         {/* IMAGE */}

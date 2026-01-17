@@ -6,8 +6,9 @@ const About = () => {
   return (
     <section
       id="about"
-      className="bg-gray-100 py-24 px-6 md:px-12"
+      className="scroll-mt-20 bg-gray-100 py-24 px-6 md:px-12"
     >
+
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
         {/* IMAGE */}
