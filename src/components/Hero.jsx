@@ -51,7 +51,7 @@ const Hero = () => {
     {
       name: "Resume",
       icon: "fa-solid fa-download",
-      link: "/resume.pdf",
+      link: "https://drive.google.com/file/d/1E1GH9oh6V2S5FMVXQdH4LAMsdarwK6Ol/view?usp=sharing",
     },
   ];
 
