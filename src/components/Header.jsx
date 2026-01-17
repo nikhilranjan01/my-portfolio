@@ -32,7 +32,7 @@ const Header = () => {
           <li><a href="#home" className="hover:text-red-500 transition">Home</a></li>
           <li><a href="#about" className="hover:text-red-500 transition">About</a></li>
           <li><a href="#skills" className="hover:text-red-500 transition">Skills</a></li>
-          <li><a href="#project" className="hover:text-red-500 transition">Projects</a></li>
+          <li><a href="#projects" className="hover:text-red-500 transition">Projects</a></li>
           <li><a href="#contact" className="hover:text-red-500 transition">Contact</a></li>
         </ul>
 
@@ -56,7 +56,7 @@ const Header = () => {
           <ul className="flex flex-col items-center gap-6 py-6 font-medium text-gray-700">
             <li><a onClick={() => setMenuOpen(false)} href="#home">Home</a></li>
             <li><a onClick={() => setMenuOpen(false)} href="#about">About</a></li>
-            <li><a onClick={() => setMenuOpen(false)} href="#about">Skills</a></li>
+            <li><a onClick={() => setMenuOpen(false)} href="#skills">Skills</a></li>
             <li><a onClick={() => setMenuOpen(false)} href="#projects">Projects</a></li>
             <li><a onClick={() => setMenuOpen(false)} href="#contact">Contact</a></li>
           </ul>
