@@ -44,8 +44,9 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="scroll-mt-20 py-20 bg-white px-6 md:px-12"
+      className="py-20 bg-white px-6 md:px-12 scroll-mt-20"
     >
+
 
       <div className="max-w-7xl mx-auto">
 
