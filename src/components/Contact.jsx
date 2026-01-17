@@ -3,7 +3,11 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 bg-white px-6 md:px-16">
+    <section
+      id="contact"
+      className="scroll-mt-16 py-24 bg-white px-6 md:px-16"
+    >
+
       <div className="max-w-5xl mx-auto">
 
         {/* Heading */}
@@ -22,7 +26,7 @@ const Contact = () => {
           transition={{ delay: 0.2 }}
           className="text-center text-gray-600 mb-14"
         >
-          Have a project, opportunity, or just want to say hello?  
+          Have a project, opportunity, or just want to say hello?
           Feel free to reach out!
         </motion.p>
 
