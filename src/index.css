@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+}
+
+/* Header height variable */
+:root {
+  --header-height: 64px;
+}
+
+/* Fix for anchor scroll offset */
+section {
+  scroll-margin-top: var(--header-height);
 }
