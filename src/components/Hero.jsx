@@ -27,6 +27,12 @@ const Hero = () => {
       icon: "fa-brands fa-facebook-f",
       link: "https://www.facebook.com/",
     },
+
+    {
+      name: "Instagram",
+      icon: "fa-brands fa-instagram",
+      link: "https://www.instagram.com/nikhil_ranjan_01/",
+    },
     {
       name: "LinkedIn",
       icon: "fa-brands fa-linkedin-in",
@@ -41,11 +47,6 @@ const Hero = () => {
       name: "LeetCode",
       icon: "fa-solid fa-laptop-code",
       link: "https://leetcode.com/nikhilranjan01",
-    },
-    {
-      name: "Instagram",
-      icon: "fa-brands fa-instagram",
-      link: "https://www.instagram.com/nikhil_ranjan_01/",
     },
 
     {
