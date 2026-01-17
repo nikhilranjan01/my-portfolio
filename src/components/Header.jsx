@@ -8,19 +8,19 @@ const Header = () => {
     <header
       className="
         fixed top-0 left-0 w-full z-50
-        bg-white shadow-md
+        bg-white
+        shadow-md
         h-16
-        transform-gpu
       "
     >
       <nav className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-full">
 
-        {/* LOGO (NO ANIMATION) */}
+        {/* LOGO */}
         <a href="#home" className="flex items-center gap-2">
           <img
             src={logo}
             alt="Logo"
-            className="w-9 h-9 object-cover rounded-full"
+            className="w-9 h-9 rounded-full object-cover"
           />
           <span className="text-xl font-bold text-black">
             My<span className="text-red-500"> Portfolio</span>
@@ -33,7 +33,7 @@ const Header = () => {
             <li key={item}>
               <a
                 href={`#${item}`}
-                className="hover:text-red-500 transition"
+                className="hover:text-red-500 transition-colors"
               >
                 {item.charAt(0).toUpperCase() + item.slice(1)}
               </a>
@@ -45,6 +45,7 @@ const Header = () => {
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="md:hidden text-2xl text-black"
+          aria-label="Toggle Menu"
         >
           ☰
         </button>
