@@ -52,7 +52,7 @@ const Hero = () => {
     {
       name: "Resume",
       icon: "fa-solid fa-download",
-      link: "https://drive.google.com/file/d/1E1GH9oh6V2S5FMVXQdH4LAMsdarwK6Ol/view?usp=sharing",
+      link: "https://flowcv.com/resume/g4ud9rbdss",
     },
   ];
 
